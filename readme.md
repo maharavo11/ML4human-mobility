@@ -44,7 +44,6 @@ human-mobility-prediction/
 │   ├── 04_train_transformer.py
 │   ├── 05_predict_future.py
 │   └── 06_analysis_and_plots.py
-├── .gitignore
 ├── README.md
 └── requirements.txt
 ```
