@@ -2,7 +2,7 @@
 
 This project develops a machine learning pipeline to predict future air passenger volume between countries. It leverages a hybrid modeling approach, combining a classical Gradient Boosting model (XGBoost) with a modern deep learning architecture (Transformer) to capture different patterns in the data.
 
-The primary goal is to forecast monthly passenger traffic on various international routes incuding Africa, Asia and South Ameerica to the year 2030 in order to provide insights into the potential evolution of global mobility for public health interventon.
+The primary goal is to forecast monthly passenger traffic on various international routes incuding Africa, Asia and South America to the year 2030 in order to provide insights into the potential evolution of global mobility for public health interventon.
 
 ## Data Sources
 
@@ -45,7 +45,6 @@ human-mobility-prediction/
 │   ├── 05_predict_future.py
 │   └── 06_analysis_and_plots.py
 ├── README.md
-└── requirements.txt
 ```
 
 ## Setup and Installation
@@ -72,42 +71,42 @@ human-mobility-prediction/
 
 ## How to Run the Pipeline
 
-The scripts in the `src/` directory are designed to be run sequentially. Execute them from the root directory of the project.
+The scripts in the `source/` directory are designed to be run sequentially. Execute them from the root directory of the project.
 
 1.  **Preprocess and Merge Data**:
     This script loads all raw data, cleans it, and merges it into a single file.
     ```bash
-    python src/01_data_preprocessing.py
+    python source/01_data_preprocessing.py
     ```
 
 2.  **Engineer Features**:
     This script creates the `Prev_passenger` lagged feature.
     ```bash
-    python src/02_feature_engineering.py
+    python source/02_feature_engineering.py
     ```
 
 3.  **Train the XGBoost Model**:
     Trains the XGBoost model and saves the model file, scalers, and encoders.
     ```bash
-    python src/03_train_xgboost.py
+    python source/03_train_xgboost.py
     ```
 
 4.  **Train the Transformer Model**:
     Trains the Transformer neural network and saves the model file.
     ```bash
-    python src/04_train_transformer.py
+    python source/04_train_transformer.py
     ```
     
 5.  **Generate Future Predictions**:
     This is the core prediction step. It loads both trained models and iteratively forecasts passenger volume from 2020 to 2031. **Note: This script may take a significant amount of time to run.**
     ```bash
-    python src/05_predict_future.py
+    python source/05_predict_future.py
     ```
 
 6.  **Create Analysis and Plots**:
     Generates all final visualizations, including time-series plots and global flow maps.
     ```bash
-    python src/06_analysis_and_plots.py
+    python source/06_analysis_and_plots.py
     ```
 
 After running the full pipeline, all model artifacts, predictions, and plots will be available in their respective directories.
